@@ -1,5 +1,6 @@
 import streamlit as st
 from config.conexion import obtener_conexion
+
 def verificar_usuario(usuario, contrasena):
     conexion = obtener_conexion()
     if conexion is None:
