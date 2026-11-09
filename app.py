@@ -1,7 +1,7 @@
 import streamlit as st
 from modulos.login import login
 from modulos.VENTAS import mostrar_venta
-from modulos.inventario import mostrar_inventario # <-- 1. Importar el nuevo módulo
+from modulos.inventario import mostrar_inventario
 
 # Inicializar variables de sesión
 if "sesion_iniciada" not in st.session_state:
@@ -16,7 +16,6 @@ if st.session_state["sesion_iniciada"]:
     st.sidebar.title("Menú")
     st.sidebar.write(f"Usuario: {st.session_state['usuario']}")
 
-    # <-- 2. Agregar "Inventario" a las opciones del menú
     opciones = ["Ventas", "Inventario", "Información"]
     seleccion = st.sidebar.selectbox("Seleccione una opción", opciones)
 
@@ -24,7 +23,7 @@ if st.session_state["sesion_iniciada"]:
     if seleccion == "Ventas":
         mostrar_venta()
 
-    # <-- 3. Condición para llamar al nuevo módulo
+    # Mostrar módulo de inventario
     elif seleccion == "Inventario":
         mostrar_inventario()
 
