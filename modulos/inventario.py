@@ -5,7 +5,6 @@ def mostrar_inventario():
     st.header("📦 Control de Inventario")
     st.write("Vista general de las existencias actuales en planta.")
 
-    # Datos de ejemplo para cumplir con el requisito visual de la tarea
     datos = {
         "Código": ["P001", "P002", "P003", "P004"],
         "Descripción": ["Bolsas PEAD", "Bolsas PEBD", "Rollos 100 lb", "Resina Base"],
@@ -14,8 +13,5 @@ def mostrar_inventario():
     }
     
     df = pd.DataFrame(datos)
-    
-    # Mostrar la tabla en Streamlit
     st.dataframe(df, use_container_width=True, hide_index=True)
-    
-    st.info("Nota: La funcionalidad para agregar, editar y eliminar inventario se desarrollará en futuras entregas del proyecto.")
+    st.info("Nota: La funcionalidad para agregar, editar y eliminar inventario se desarrollará en futuras entregas.")
