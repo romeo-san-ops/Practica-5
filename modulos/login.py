@@ -27,6 +27,7 @@ def verificar_usuario(usuario, contrasena):
             cursor.close()
         if conexion.is_connected():
             conexion.close()
+
 def login():
     st.title("Inicio de sesión")
     usuario = st.text_input("Usuario")
